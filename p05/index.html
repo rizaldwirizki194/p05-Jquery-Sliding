@@ -1,0 +1,114 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  .Sliding {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(228, 60, 253);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .About {
+    font-family: Times New Roman;
+    width: 100%;
+    font-style: italic;
+    font-size: 30px;
+    padding: 15px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 10px 16px 0px rgb(0 0 0 / 20%);
+    background-color: rgb(188, 17, 236);
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 440px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 2255, 0, 2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  .logo img {
+    width: 4cm;
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+    transition: 0.2s;
+    margin: 13px;
+    opacity: 75%;
+    cursor: pointer;
+  }
+  .logo h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .logo {
+    font-size: 13px;
+    margin: 10px auto;
+    max-width: 330px;
+    text-align: center;
+  }
+  .btn {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    background: white;
+    color: red;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin: 25px 0 10px;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Jquery Sliding</title>
+    <link rel="stylesheet" href="styler.css" />
+  </head>
+  <body>
+    <div class="Sliding">
+      <div class="About">Jquery Sliding</div>
+      <div class="logo">
+        <img src="img/Rizal.jpeg" />
+        <h2>Niken Zeliana Putri</h2>
+        <h4>Mahasiswa | Teknik Informatika</h4>
+        <br />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eos aut temporibus quod saepe. Dolorem recusandae officiis, ipsum repellendus soluta, perspiciatis, eaque quae ea fuga repudiandae aut similique ducimus eum!.</p>
+        <a href="#" class="btn">Message me</a>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $('.About').click(function () {
+      $('.logo').slideToggle('slow');
+    });
+  });
+</script>
